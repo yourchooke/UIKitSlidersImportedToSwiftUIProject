@@ -11,6 +11,7 @@
 		278E126E29239239003D2B4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E126D29239239003D2B4A /* ContentView.swift */; };
 		278E12702923923B003D2B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E126F2923923B003D2B4A /* Assets.xcassets */; };
 		278E12732923923B003D2B4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E12722923923B003D2B4A /* Preview Assets.xcassets */; };
+		278E127C2923948C003D2B4A /* SliderFromUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E127B2923948C003D2B4A /* SliderFromUIKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		278E126D29239239003D2B4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		278E126F2923923B003D2B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278E12722923923B003D2B4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		278E127B2923948C003D2B4A /* SliderFromUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFromUIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				278E126B29239239003D2B4A /* UIKitSlidersImportedToSwiftUIProjectApp.swift */,
 				278E126D29239239003D2B4A /* ContentView.swift */,
+				278E127B2923948C003D2B4A /* SliderFromUIKit.swift */,
 				278E126F2923923B003D2B4A /* Assets.xcassets */,
 				278E12712923923B003D2B4A /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278E127C2923948C003D2B4A /* SliderFromUIKit.swift in Sources */,
 				278E126E29239239003D2B4A /* ContentView.swift in Sources */,
 				278E126C29239239003D2B4A /* UIKitSlidersImportedToSwiftUIProjectApp.swift in Sources */,
 			);

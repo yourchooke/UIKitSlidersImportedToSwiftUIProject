@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var sliderValue = Float.random(in: 0 ... 100)
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            SliderFromUIKit(sliderValue: $sliderValue)
         }
         .padding()
     }
