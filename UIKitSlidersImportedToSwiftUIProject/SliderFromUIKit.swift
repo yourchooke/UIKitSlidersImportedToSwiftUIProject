@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SliderFromUIKit: UIViewRepresentable {
+
+    
     @Binding var sliderValue: Float
     let thumbAlpha: CGFloat
     
@@ -17,6 +19,11 @@ struct SliderFromUIKit: UIViewRepresentable {
         slider.minimumValue = 0
         slider.maximumValue = 100
         
+        slider.addTarget(
+            context.coordinator,
+            action: #selector(Coordinator.didMoveDone),
+            for: .allEvents)
+        
         return slider
     }
     
@@ -25,6 +32,24 @@ struct SliderFromUIKit: UIViewRepresentable {
         uiView.thumbTintColor = .blue.withAlphaComponent(thumbAlpha)
     }
     
+    func makeCoordinator() -> Coordinator {
+        Coordinator(sliderValue: $sliderValue)
+    }
+    
+}
+
+extension SliderFromUIKit {
+    class Coordinator: NSObject {
+        @Binding var sliderValue: Float
+        
+        init(sliderValue: Binding<Float>) {
+            self._sliderValue = sliderValue
+        }
+        
+        @objc func didMoveDone(_ sender: UISlider){
+            sliderValue = sender.value
+        }
+    }
 }
 
 struct SliderFromUIKit_Previews: PreviewProvider {
@@ -32,3 +57,4 @@ struct SliderFromUIKit_Previews: PreviewProvider {
         SliderFromUIKit(sliderValue: .constant(10), thumbAlpha: 0.05)
     }
 }
+

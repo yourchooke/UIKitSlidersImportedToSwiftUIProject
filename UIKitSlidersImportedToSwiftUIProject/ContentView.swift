@@ -16,7 +16,6 @@ struct ContentView: View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к \(Int(targetValue))")
             SliderFromUIKit(sliderValue: $sliderValue, thumbAlpha: CGFloat(computeScore())/100)
-            Text("вот: \(CGFloat(computeScore())/100)")
             Button(action: {}) {
                 Text("Проверь меня")
             }
