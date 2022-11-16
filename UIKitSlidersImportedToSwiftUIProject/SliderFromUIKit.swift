@@ -29,7 +29,7 @@ struct SliderFromUIKit: UIViewRepresentable {
     
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = sliderValue
-        uiView.thumbTintColor = .blue.withAlphaComponent(thumbAlpha)
+        uiView.thumbTintColor = .red.withAlphaComponent(thumbAlpha)
     }
     
     func makeCoordinator() -> Coordinator {
@@ -54,7 +54,7 @@ extension SliderFromUIKit {
 
 struct SliderFromUIKit_Previews: PreviewProvider {
     static var previews: some View {
-        SliderFromUIKit(sliderValue: .constant(10), thumbAlpha: 0.05)
+        SliderFromUIKit(sliderValue: .constant(10), thumbAlpha: 0.5)
     }
 }
 

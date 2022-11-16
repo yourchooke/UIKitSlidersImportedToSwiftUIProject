@@ -10,17 +10,28 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var sliderValue = Float.random(in: 0 ... 100)
+    @State private var alertPresented = false
+    
     @State private var targetValue = Int.random(in: 0...100)
     
     var body: some View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к \(Int(targetValue))")
             SliderFromUIKit(sliderValue: $sliderValue, thumbAlpha: CGFloat(computeScore())/100)
-            Button(action: {}) {
+            Button(action: {alertPresented.toggle()}) {
                 Text("Проверь меня")
             }
+            .alert(
+                "Ваш результат",
+                isPresented: $alertPresented,
+                actions: {
+                    
+                }, message: {
+                    Text("\(computeScore())")
+                }
+            )
             .padding()
-            Button(action: {}) {
+            Button(action: {targetValue = Int.random(in: 0...100)}) {
                 Text("Начать заново")
             }
         }
